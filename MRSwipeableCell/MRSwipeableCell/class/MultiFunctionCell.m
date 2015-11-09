@@ -104,6 +104,9 @@ NSUInteger DeviceSystemMajorVersion()
     self.rightMenus = [NSArray arrayWithArray:rightMenus];
     self.leftMenus = [NSArray arrayWithArray:leftMenus];
 
+    self.leftMargin = 10+self.leftMenus.count*CellMenuWidth; //forbid the left slide
+    self.rightMargin = 0-10-self.rightMenus.count*CellMenuWidth;
+
     [self.baseCellView addSubview:self.cellContentView];
 }
 
